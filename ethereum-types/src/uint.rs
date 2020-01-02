@@ -6,6 +6,23 @@ use uint_crate::*;
 pub use uint_crate::FromDecStrErr;
 
 construct_uint! {
+	/// Unsigned 32-bit integer.
+	pub struct U32(1);
+}
+impl_uint_rlp!(U32, 1);
+#[cfg(feature = "serialize")]
+impl_uint_serde!(U32, 1);
+
+construct_uint! {
+	/// Unsigned 96-bit integer.
+	pub struct U96(1);
+}
+impl_uint_rlp!(U96, 1);
+#[cfg(feature = "serialize")]
+impl_uint_serde!(U96, 1);
+
+
+construct_uint! {
 	/// Unsigned 64-bit integer.
 	pub struct U64(1);
 }
